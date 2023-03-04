@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Tilt Neon', cursive;
+}
+
+.row {
+    height: 100vh;
+}
+
+.navBtt {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    background-image: linear-gradient(120deg, #bb2845,#e47327, #bb2845);
+    color: white;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    font-size: 20px;
+
+}
+
+.findBtt {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    background-image: linear-gradient(120deg, #bb2845,#e47327, #bb2845);
+    color: white;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    font-size: 20px;
+}
+
+
+.sideBar {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: solid 1px black;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #23282c;
+    border-left: solid 1px #14171a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #343a40;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #495057;
+}
+
+
+.navLogo {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #14171a;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.navLogo img {
+    width: 50%;
+    height: auto;
+}
+
+.nav-item {
+    color: white;
+    font-size: large;
+    background-color: #23282c;
+    border-radius: 0 25px 25px 0;
+    margin: 10px;
+    padding-left: 15px;
+    border-left: solid 3px #14171a;
+}
+
+.nav-item .active {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    border:none;
+
+    border-left: solid 3px #14171a;
+    border-radius: 0;
+    width: 80%;
+}
+
+.dropdown-item {
+    color: white;
+    background-color: #23282c;
+    border-radius: 0 25px 25px 0;
+    margin: 10px;
+    padding-left: 15px;
+
+    transition: all .3s ease-out;
+}
+
+.dropdown-item:hover {
+    background-color: #32383d;
+    color: white;
+    transform: scale(1.05);
+}
+
+.dropdown-item.active {
+    background-image: linear-gradient(90deg, #1a89b9,#19a5b9, #17d5b9);
+}
+
+.dropdown-divider {
+    border-top: dashed 2px #14171a;
+    width: 75%;
+    opacity: .5;
+}
+
+
+#docsContent {
+    color:white;
+    height: 100vh;
+    width: 100%;
+
+    background-color: #24292c;
+
+    padding: 15px;
+
+    overflow-y: scroll;
+}
+
+hr {
+    border-color: #14171a;
+    border-width: 2px;
+}
+
+.foundBar {
+    height: 100vh;
+    padding: 15px !important;
+}
+
+#foundList {
+    list-style-type: none;
+}
+
+#foundList li {
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+#foundList li:hover {
+    color: #e67726;
+    transform: scale(1.05);
+}
+
+.found-h1 {
+    font-weight: bold;
+    color:white;
+}
+
+.found-h2 {
+    opacity: .75;
+}
+
+.found-h3 {
+    opacity: .5;
+}
