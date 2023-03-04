@@ -13,12 +13,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./style.css">
     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/material-darker.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
     </head>
     <body>
             <button class="btn btn-primary d-md-none navBtt" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <button class="btn btn-primary d-md-none findBtt" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFindbar" aria-controls="offcanvasFindbar">
+            <button class="btn btn-primary d-lg-none findBtt" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFindbar" aria-controls="offcanvasFindbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
 
@@ -94,6 +97,56 @@
                             <div class="alert alert-warning" role="alert">
                                 Work in progress...
                             </div>
+                            <pre><code class="language-java">
+/**
+* Get message translation as list of {@link net.kyori.adventure.text.Component}
+* @param languageLevel {@link com.github.kpgtb.ktools.manager.language.LanguageLevel} PLUGIN (from lang) or GLOBAL (from Ktools)
+* @param code Code of message
+* @param player {@link org.bukkit.entity.Player} to PlaceholderAPI
+* @param placeholders List of {@link net.kyori.adventure.text.minimessage.tag.resolver.Placeholder}
+* @return A list of translated components with PAPI and plugin's placeholders
+*/
+public ArrayList&lt;Component&gt; getComponent(LanguageLevel languageLevel, String code, Player player, ArrayList&lt;TagResolver&gt; placeholders) {
+    ArrayList&lt;String&gt; messages = new ArrayList&lt;&gt;();
+
+    LanguageManager manager = languageLevel == LanguageLevel.PLUGIN ? this : this.globalManager;
+
+    if(manager.pluginMessages.containsKey(code)) {
+        messages.add(manager.pluginMessages.get(code));
+    } else if (manager.pluginMessagesLong.containsKey(code)) {
+        messages.addAll(manager.pluginMessagesLong.get(code));
+    } else {
+        messages.add("&lt;red&gt;Translation not found! [lang="+manager.lang+", level="+languageLevel.name()+", code="+code+"]");
+    }
+
+    ArrayList&lt;Component&gt; result = new ArrayList&lt;&gt;();
+    MiniMessage mm = MiniMessage.miniMessage();
+
+    boolean hasPAPI = Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
+
+    messages.forEach(msg -&gt; {
+        if(hasPAPI && player != null) {
+            msg = PlaceholderAPI.setPlaceholders(player, msg);
+        }
+        result.add(
+                mm.deserialize(msg, placeholders.toArray(new TagResolver[0]))
+        );
+    });
+
+    return result;
+}
+                            </code></pre>
+                            <pre><code class="language-xml">
+&lt;repository&gt;
+    &lt;id&gt;jitpack.io&lt;/id&gt;
+    &lt;url&gt;https://jitpack.io&lt;/url&gt;
+&lt;/repository&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.github.KPGTB&lt;/groupId&gt;
+    &lt;artifactId&gt;Ktools&lt;/artifactId&gt;
+    &lt;version&gt;LATEST&lt;/version&gt;
+&lt;/dependency&gt;
+                            </code></pre>
                         </div>
                         <div class="tab-pane fade" id="started-tab-pane" role="tabpanel" aria-labelledby="started-tab" tabindex="0">Getting Started</div>
                         <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">Basics</div>
@@ -135,6 +188,12 @@
                     </div>
                 </div>
             </div>
+
+            <footer>
+                &copy; 2023 KPG-TB |
+                All rights reserved |
+                Logo by <a href="https://www.freepik.com/free-vector/creative-gradient-code-logo_12064006.htm#query=programmer%20logo&position=2&from_view=search&track=ais">Freepik</a>
+            </footer>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
