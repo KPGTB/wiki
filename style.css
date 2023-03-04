@@ -29,6 +29,7 @@ body::-webkit-scrollbar {
 
     font-size: 20px;
 
+    z-index: 10000;
 }
 
 .findBtt {
@@ -46,6 +47,8 @@ body::-webkit-scrollbar {
     height: 60px;
 
     font-size: 20px;
+
+    z-index: 10000;
 }
 
 
