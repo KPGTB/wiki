@@ -232,8 +232,21 @@ pre {
     font-weight: bold;
 }
 
-.xml:after {
+.maven:after {
     content: "MAVEN";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(120deg, #1a89b9, #17d5b9,#1a89b9);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.gradle:after {
+    content: "GRADLE";
     position: absolute;
     top: 0;
     left: 0;

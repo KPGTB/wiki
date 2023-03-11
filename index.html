@@ -15,6 +15,7 @@
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/material-darker.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/gradle.min.js"></script>
         <script>hljs.highlightAll();</script>
     </head>
     <body>
@@ -88,7 +89,6 @@
                                 </ul>
                             </div>
                         </div>
-                        
                     </div>
 
                     <div class="col-12 col-md-8 col-lg-7 col-xxl-8">
@@ -99,58 +99,63 @@
                                 <div class="alert alert-warning" role="alert">
                                     Work in progress...
                                 </div>
-                                <pre class="java"><code class="language-java">
-/**
-* Get message translation as list of {@link net.kyori.adventure.text.Component}
-* @param languageLevel {@link com.github.kpgtb.ktools.manager.language.LanguageLevel} PLUGIN (from lang) or GLOBAL (from Ktools)
-* @param code Code of message
-* @param player {@link org.bukkit.entity.Player} to PlaceholderAPI
-* @param placeholders List of {@link net.kyori.adventure.text.minimessage.tag.resolver.Placeholder}
-* @return A list of translated components with PAPI and plugin's placeholders
-*/
-public ArrayList&lt;Component&gt; getComponent(LanguageLevel languageLevel, String code, Player player, ArrayList&lt;TagResolver&gt; placeholders) {
-ArrayList&lt;String&gt; messages = new ArrayList&lt;&gt;();
+                                <div class="alert alert-info" role="alert">
+                                    Select plugin and chapter from left sidebar!
+                                </div>
+                                <div class="alert alert-primary" role="alert">
+                                    &copy; 2023 KPG-TB |
+                                    All rights reserved |
+                                    Logo by <a href="https://www.freepik.com/free-vector/creative-gradient-code-logo_12064006.htm#query=programmer%20logo&position=2&from_view=search&track=ais">Freepik</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="started-tab-pane" role="tabpanel" aria-labelledby="started-tab" tabindex="0">
+                                <h1>Getting Started</h1>
+                                <hr>
+                                <h2>About plugin</h2>
+                                <hr>
+                                Ktools is an advanced, modern spigot plugin. It works on versions from 1.14 to 1.19. It adds a lot of managers that can be used by developers to simplify process of making plugins.
+                                <hr>
+                                <h2>Adding to project</h2>
+                                <hr>
 
-LanguageManager manager = languageLevel == LanguageLevel.PLUGIN ? this : this.globalManager;
+                                <div class="alert alert-info" role="alert">
+                                    Remember to download correct version of Ktools <a href="https://github.com/KPGTB/Ktools/releases" target="_blank">here</a> and put it into server's plugins folder!
+                                </div>
 
-if(manager.pluginMessages.containsKey(code)) {
-    messages.add(manager.pluginMessages.get(code));
-} else if (manager.pluginMessagesLong.containsKey(code)) {
-    messages.addAll(manager.pluginMessagesLong.get(code));
-} else {
-    messages.add("&lt;red&gt;Translation not found! [lang="+manager.lang+", level="+languageLevel.name()+", code="+code+"]");
-}
-
-ArrayList&lt;Component&gt; result = new ArrayList&lt;&gt;();
-MiniMessage mm = MiniMessage.miniMessage();
-
-boolean hasPAPI = Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
-
-messages.forEach(msg -&gt; {
-    if(hasPAPI && player != null) {
-        msg = PlaceholderAPI.setPlaceholders(player, msg);
-    }
-    result.add(
-            mm.deserialize(msg, placeholders.toArray(new TagResolver[0]))
-    );
-});
-
-return result;
-}
+                                <h3>plugin.yml</h3>
+                                <pre class='java'><code class='language-java'>
+depend: [Ktools]
                                 </code></pre>
-                                <pre class="xml"><code class="language-xml">
+
+                                <h3>Maven</h3>
+                                <pre class='maven'><code class='language-xml'>
 &lt;repository&gt;
     &lt;id&gt;jitpack.io&lt;/id&gt;
     &lt;url&gt;https://jitpack.io&lt;/url&gt;
 &lt;/repository&gt;
+                                </code></pre>
+                                <pre class='maven'><code class='language-xml'>
 &lt;dependency&gt;
     &lt;groupId&gt;com.github.KPGTB&lt;/groupId&gt;
     &lt;artifactId&gt;Ktools&lt;/artifactId&gt;
-    &lt;version&gt;LATEST&lt;/version&gt;
+    &lt;version&gt;{VERSION}&lt;/version&gt;
 &lt;/dependency&gt;
                                 </code></pre>
+
+                                <h3>Gradle</h3>
+
+                                <pre class='gradle'><code class='language-gradle'>
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+                                </code></pre>
+
+                                <pre class='gradle'><code class='language-gradle'>
+dependencies {
+    implementation 'com.github.KPGTB:Ktools:{VERSION}'
+}
+                                </code></pre>
                             </div>
-                            <div class="tab-pane fade" id="started-tab-pane" role="tabpanel" aria-labelledby="started-tab" tabindex="0">Getting Started</div>
                             <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">Basics</div>
                             <div class="tab-pane fade" id="debug-tab-pane" role="tabpanel" aria-labelledby="debug-tab" tabindex="0">Debug</div>
                             <div class="tab-pane fade" id="updater-tab-pane" role="tabpanel" aria-labelledby="updater-tab" tabindex="0">Updater</div>
@@ -191,12 +196,6 @@ return result;
                     </div>
                 </div>
             </div>
-
-            <footer>
-                &copy; 2023 KPG-TB |
-                All rights reserved |
-                Logo by <a href="https://www.freepik.com/free-vector/creative-gradient-code-logo_12064006.htm#query=programmer%20logo&position=2&from_view=search&track=ais">Freepik</a>
-            </footer>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
