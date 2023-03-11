@@ -25,79 +25,81 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
 
-            <div class="row g-0">
-                <div class="col-0 col-md-4 col-lg-3 col-xxl-2">
-                    <div class="offcanvas-md offcanvas-start sideBar text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                                <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                                KPG-TB Wiki
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body flex-column">
-                            <div class="d-none d-md-flex navLogo">
-                                <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <div class="container-fluid g-0">
+                <div class="row g-0">
+                    <div class="col-0 col-md-4 col-lg-3 col-xxl-2">
+                        <div class="offcanvas-md offcanvas-start sideBar text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                    <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                                    KPG-TB Wiki
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
                             </div>
+                            <div class="offcanvas-body flex-column">
+                                <div class="d-none d-md-flex navLogo">
+                                    <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                                </div>
 
-                            <ul class="navbar-nav justify-content-end flex-grow-1"  role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" href="#">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle slide-toggle" data-bs-auto-close="false" aria-expanded="false" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Ktools
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation"><a class="dropdown-item" id="started-tab" data-bs-toggle="tab" data-bs-target="#started-tab-pane" type="button" role="tab" aria-controls="started-tab-pane" aria-selected="false" href="#">Getting Started</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="basics-tab" data-bs-toggle="tab" data-bs-target="#basics-tab-pane" type="button" role="tab" aria-controls="basics-tab-pane" aria-selected="false" href="#">Basics</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="debug-tab" data-bs-toggle="tab" data-bs-target="#debug-tab-pane" type="button" role="tab" aria-controls="debug-tab-pane" aria-selected="false" href="#">Debug</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="updater-tab" data-bs-toggle="tab" data-bs-target="#updater-tab-pane" type="button" role="tab" aria-controls="updater-tab-pane" aria-selected="false" href="#">Updater</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="cache-tab" data-bs-toggle="tab" data-bs-target="#cache-tab-pane" type="button" role="tab" aria-controls="cache-tab-pane" aria-selected="false" href="#">Cache</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false" href="#">Data</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="language-tab" data-bs-toggle="tab" data-bs-target="#language-tab-pane" type="button" role="tab" aria-controls="language-tab-pane" aria-selected="false" href="#">Language</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="commands-tab" data-bs-toggle="tab" data-bs-target="#commands-tab-pane" type="button" role="tab" aria-controls="commands-tab-pane" aria-selected="false" href="#">Commands</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="listeners-tab" data-bs-toggle="tab" data-bs-target="#listeners-tab-pane" type="button" role="tab" aria-controls="listeners-tab-pane" aria-selected="false" href="#">Listeners</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="itembuild-tab" data-bs-toggle="tab" data-bs-target="#itembuild-tab-pane" type="button" role="tab" aria-controls="itembuild-tab-pane" aria-selected="false" href="#">ItemBuilder</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="itemman-tab" data-bs-toggle="tab" data-bs-target="#itemman-tab-pane" type="button" role="tab" aria-controls="itemman-tab-pane" aria-selected="false" href="#">ItemUtil</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="recipes-tab" data-bs-toggle="tab" data-bs-target="#recipes-tab-pane" type="button" role="tab" aria-controls="recipes-tab-pane" aria-selected="false" href="#">Recipes</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="gui-tab" data-bs-toggle="tab" data-bs-target="#gui-tab-pane" type="button" role="tab" aria-controls="gui-tab-pane" aria-selected="false" href="#">GUI</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li role="presentation"><a class="dropdown-item" id="resourcepack-tab" data-bs-toggle="tab" data-bs-target="#resourcepack-tab-pane" type="button" role="tab" aria-controls="resourcepack-tab-pane" aria-selected="false" href="#">Resourcepack</a></li>
-                                        <li role="presentation"><a class="dropdown-item" id="ui-tab" data-bs-toggle="tab" data-bs-target="#ui-tab-pane" type="button" role="tab" aria-controls="ui-tab-pane" aria-selected="false" href="#">UI</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                                <ul class="navbar-nav justify-content-end flex-grow-1"  role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle slide-toggle" data-bs-auto-close="false" aria-expanded="false" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Ktools
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li role="presentation"><a class="dropdown-item" id="started-tab" data-bs-toggle="tab" data-bs-target="#started-tab-pane" type="button" role="tab" aria-controls="started-tab-pane" aria-selected="false" href="#">Getting Started</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="basics-tab" data-bs-toggle="tab" data-bs-target="#basics-tab-pane" type="button" role="tab" aria-controls="basics-tab-pane" aria-selected="false" href="#">Basics</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="debug-tab" data-bs-toggle="tab" data-bs-target="#debug-tab-pane" type="button" role="tab" aria-controls="debug-tab-pane" aria-selected="false" href="#">Debug</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="updater-tab" data-bs-toggle="tab" data-bs-target="#updater-tab-pane" type="button" role="tab" aria-controls="updater-tab-pane" aria-selected="false" href="#">Updater</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="cache-tab" data-bs-toggle="tab" data-bs-target="#cache-tab-pane" type="button" role="tab" aria-controls="cache-tab-pane" aria-selected="false" href="#">Cache</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false" href="#">Data</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="language-tab" data-bs-toggle="tab" data-bs-target="#language-tab-pane" type="button" role="tab" aria-controls="language-tab-pane" aria-selected="false" href="#">Language</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="commands-tab" data-bs-toggle="tab" data-bs-target="#commands-tab-pane" type="button" role="tab" aria-controls="commands-tab-pane" aria-selected="false" href="#">Commands</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="listeners-tab" data-bs-toggle="tab" data-bs-target="#listeners-tab-pane" type="button" role="tab" aria-controls="listeners-tab-pane" aria-selected="false" href="#">Listeners</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="itembuild-tab" data-bs-toggle="tab" data-bs-target="#itembuild-tab-pane" type="button" role="tab" aria-controls="itembuild-tab-pane" aria-selected="false" href="#">ItemBuilder</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="itemman-tab" data-bs-toggle="tab" data-bs-target="#itemman-tab-pane" type="button" role="tab" aria-controls="itemman-tab-pane" aria-selected="false" href="#">ItemUtil</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="recipes-tab" data-bs-toggle="tab" data-bs-target="#recipes-tab-pane" type="button" role="tab" aria-controls="recipes-tab-pane" aria-selected="false" href="#">Recipes</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="gui-tab" data-bs-toggle="tab" data-bs-target="#gui-tab-pane" type="button" role="tab" aria-controls="gui-tab-pane" aria-selected="false" href="#">GUI</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li role="presentation"><a class="dropdown-item" id="resourcepack-tab" data-bs-toggle="tab" data-bs-target="#resourcepack-tab-pane" type="button" role="tab" aria-controls="resourcepack-tab-pane" aria-selected="false" href="#">Resourcepack</a></li>
+                                            <li role="presentation"><a class="dropdown-item" id="ui-tab" data-bs-toggle="tab" data-bs-target="#ui-tab-pane" type="button" role="tab" aria-controls="ui-tab-pane" aria-selected="false" href="#">UI</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                     </div>
-                </div>
 
-                <div class="col">
-                    <div class="tab-content" id="docsContent">
-                        <div class="tab-pane fade active show" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                            <h1>KPG-TB Wiki</h1>
-                            <hr>
-                            <div class="alert alert-warning" role="alert">
-                                Work in progress...
-                            </div>
-                            <pre><code class="language-java">
+                    <div class="col-12 col-md-8 col-lg-7 col-xxl-8">
+                        <div class="tab-content" id="docsContent">
+                            <div class="tab-pane fade active show" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <h1>KPG-TB Wiki</h1>
+                                <hr>
+                                <div class="alert alert-warning" role="alert">
+                                    Work in progress...
+                                </div>
+                                <pre class="java"><code class="language-java">
 /**
 * Get message translation as list of {@link net.kyori.adventure.text.Component}
 * @param languageLevel {@link com.github.kpgtb.ktools.manager.language.LanguageLevel} PLUGIN (from lang) or GLOBAL (from Ktools)
@@ -107,36 +109,36 @@
 * @return A list of translated components with PAPI and plugin's placeholders
 */
 public ArrayList&lt;Component&gt; getComponent(LanguageLevel languageLevel, String code, Player player, ArrayList&lt;TagResolver&gt; placeholders) {
-    ArrayList&lt;String&gt; messages = new ArrayList&lt;&gt;();
+ArrayList&lt;String&gt; messages = new ArrayList&lt;&gt;();
 
-    LanguageManager manager = languageLevel == LanguageLevel.PLUGIN ? this : this.globalManager;
+LanguageManager manager = languageLevel == LanguageLevel.PLUGIN ? this : this.globalManager;
 
-    if(manager.pluginMessages.containsKey(code)) {
-        messages.add(manager.pluginMessages.get(code));
-    } else if (manager.pluginMessagesLong.containsKey(code)) {
-        messages.addAll(manager.pluginMessagesLong.get(code));
-    } else {
-        messages.add("&lt;red&gt;Translation not found! [lang="+manager.lang+", level="+languageLevel.name()+", code="+code+"]");
-    }
-
-    ArrayList&lt;Component&gt; result = new ArrayList&lt;&gt;();
-    MiniMessage mm = MiniMessage.miniMessage();
-
-    boolean hasPAPI = Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
-
-    messages.forEach(msg -&gt; {
-        if(hasPAPI && player != null) {
-            msg = PlaceholderAPI.setPlaceholders(player, msg);
-        }
-        result.add(
-                mm.deserialize(msg, placeholders.toArray(new TagResolver[0]))
-        );
-    });
-
-    return result;
+if(manager.pluginMessages.containsKey(code)) {
+    messages.add(manager.pluginMessages.get(code));
+} else if (manager.pluginMessagesLong.containsKey(code)) {
+    messages.addAll(manager.pluginMessagesLong.get(code));
+} else {
+    messages.add("&lt;red&gt;Translation not found! [lang="+manager.lang+", level="+languageLevel.name()+", code="+code+"]");
 }
-                            </code></pre>
-                            <pre><code class="language-xml">
+
+ArrayList&lt;Component&gt; result = new ArrayList&lt;&gt;();
+MiniMessage mm = MiniMessage.miniMessage();
+
+boolean hasPAPI = Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
+
+messages.forEach(msg -&gt; {
+    if(hasPAPI && player != null) {
+        msg = PlaceholderAPI.setPlaceholders(player, msg);
+    }
+    result.add(
+            mm.deserialize(msg, placeholders.toArray(new TagResolver[0]))
+    );
+});
+
+return result;
+}
+                                </code></pre>
+                                <pre class="xml"><code class="language-xml">
 &lt;repository&gt;
     &lt;id&gt;jitpack.io&lt;/id&gt;
     &lt;url&gt;https://jitpack.io&lt;/url&gt;
@@ -146,44 +148,45 @@ public ArrayList&lt;Component&gt; getComponent(LanguageLevel languageLevel, Stri
     &lt;artifactId&gt;Ktools&lt;/artifactId&gt;
     &lt;version&gt;LATEST&lt;/version&gt;
 &lt;/dependency&gt;
-                            </code></pre>
+                                </code></pre>
+                            </div>
+                            <div class="tab-pane fade" id="started-tab-pane" role="tabpanel" aria-labelledby="started-tab" tabindex="0">Getting Started</div>
+                            <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">Basics</div>
+                            <div class="tab-pane fade" id="debug-tab-pane" role="tabpanel" aria-labelledby="debug-tab" tabindex="0">Debug</div>
+                            <div class="tab-pane fade" id="updater-tab-pane" role="tabpanel" aria-labelledby="updater-tab" tabindex="0">Updater</div>
+            
+                            <div class="tab-pane fade" id="cache-tab-pane" role="tabpanel" aria-labelledby="cache-tab" tabindex="0">Cache</div>
+                            <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab" tabindex="0">Data</div>
+            
+                            <div class="tab-pane fade" id="language-tab-pane" role="tabpanel" aria-labelledby="language-tab" tabindex="0">Language</div>
+                            
+                            <div class="tab-pane fade" id="commands-tab-pane" role="tabpanel" aria-labelledby="commands-tab" tabindex="0">Commands</div>
+                            <div class="tab-pane fade" id="listeners-tab-pane" role="tabpanel" aria-labelledby="listeners-tab" tabindex="0">Listeners</div>
+            
+                            <div class="tab-pane fade" id="itembuild-tab-pane" role="tabpanel" aria-labelledby="itembuild-tab" tabindex="0">ItemBuilder</div>
+                            <div class="tab-pane fade" id="itemman-tab-pane" role="tabpanel" aria-labelledby="itemman-tab" tabindex="0">ItemManager</div>
+                            <div class="tab-pane fade" id="recipes-tab-pane" role="tabpanel" aria-labelledby="recipes-tab" tabindex="0">Recipes</div>
+                            
+                            <div class="tab-pane fade" id="gui-tab-pane" role="tabpanel" aria-labelledby="gui-tab" tabindex="0">GUI</div>
+            
+                            <div class="tab-pane fade" id="resourcepack-tab-pane" role="tabpanel" aria-labelledby="resourcepack-tab" tabindex="0">Resourcepack</div>
+                            <div class="tab-pane fade" id="ui-tab-pane" role="tabpanel" aria-labelledby="ui-tab" tabindex="0">UI</div>
+        
                         </div>
-                        <div class="tab-pane fade" id="started-tab-pane" role="tabpanel" aria-labelledby="started-tab" tabindex="0">Getting Started</div>
-                        <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">Basics</div>
-                        <div class="tab-pane fade" id="debug-tab-pane" role="tabpanel" aria-labelledby="debug-tab" tabindex="0">Debug</div>
-                        <div class="tab-pane fade" id="updater-tab-pane" role="tabpanel" aria-labelledby="updater-tab" tabindex="0">Updater</div>
-        
-                        <div class="tab-pane fade" id="cache-tab-pane" role="tabpanel" aria-labelledby="cache-tab" tabindex="0">Cache</div>
-                        <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab" tabindex="0">Data</div>
-        
-                        <div class="tab-pane fade" id="language-tab-pane" role="tabpanel" aria-labelledby="language-tab" tabindex="0">Language</div>
-                        
-                        <div class="tab-pane fade" id="commands-tab-pane" role="tabpanel" aria-labelledby="commands-tab" tabindex="0">Commands</div>
-                        <div class="tab-pane fade" id="listeners-tab-pane" role="tabpanel" aria-labelledby="listeners-tab" tabindex="0">Listeners</div>
-        
-                        <div class="tab-pane fade" id="itembuild-tab-pane" role="tabpanel" aria-labelledby="itembuild-tab" tabindex="0">ItemBuilder</div>
-                        <div class="tab-pane fade" id="itemman-tab-pane" role="tabpanel" aria-labelledby="itemman-tab" tabindex="0">ItemManager</div>
-                        <div class="tab-pane fade" id="recipes-tab-pane" role="tabpanel" aria-labelledby="recipes-tab" tabindex="0">Recipes</div>
-                        
-                        <div class="tab-pane fade" id="gui-tab-pane" role="tabpanel" aria-labelledby="gui-tab" tabindex="0">GUI</div>
-        
-                        <div class="tab-pane fade" id="resourcepack-tab-pane" role="tabpanel" aria-labelledby="resourcepack-tab" tabindex="0">Resourcepack</div>
-                        <div class="tab-pane fade" id="ui-tab-pane" role="tabpanel" aria-labelledby="ui-tab" tabindex="0">UI</div>
-    
                     </div>
-                </div>
 
-                <div class="col-0 col-lg-2 col-xxl-2">
-                    <div class="offcanvas-lg offcanvas-end sideBar text-bg-dark" tabindex="-1" id="offcanvasFindbar" aria-labelledby="offcanvasFindbarLabel">
-                        <div class="offcanvas-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFindbar" aria-label="Close"></button>
-                            <h5 class="offcanvas-title" id="offcanvasFindbarLabel">
-                                KPG-TB Wiki
-                                <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                            </h5>
-                        </div>
-                        <div class="offcanvas-body foundBar">
-                            <ul id="foundList"></ul>
+                    <div class="col-0 col-lg-2">
+                        <div class="offcanvas-lg offcanvas-end sideBar text-bg-dark" tabindex="-1" id="offcanvasFindbar" aria-labelledby="offcanvasFindbarLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFindbar" aria-label="Close"></button>
+                                <h5 class="offcanvas-title" id="offcanvasFindbarLabel">
+                                    KPG-TB Wiki
+                                    <img src="./img/avatar.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                                </h5>
+                            </div>
+                            <div class="offcanvas-body foundBar">
+                                <ul id="foundList"></ul>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ body::-webkit-scrollbar {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width:10px;
 }
 
 /* Track */
@@ -207,10 +207,20 @@ footer {
 .language-java {
     border: solid 1px #bb2845;
     border-radius: 10px;
+}
+
+.language-xml {
+    border: solid 1px #1a89b9;
+    border-radius: 10px;
     position: relative;
 }
 
-.language-java:before {
+pre {
+    border-radius: 10px;
+    position: relative;
+}
+
+.java:after {
     content: "JAVA";
     position: absolute;
     top: 0;
@@ -222,13 +232,7 @@ footer {
     font-weight: bold;
 }
 
-.language-xml {
-    border: solid 1px #1a89b9;
-    border-radius: 10px;
-    position: relative;
-}
-
-.language-xml:before {
+.xml:after {
     content: "MAVEN";
     position: absolute;
     top: 0;
