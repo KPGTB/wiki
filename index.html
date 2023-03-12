@@ -157,7 +157,55 @@ dependencies {
 }
                                 </code></pre>
                             </div>
-                            <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">Basics</div>
+                            <div class="tab-pane fade" id="basics-tab-pane" role="tabpanel" aria-labelledby="basics-tab" tabindex="0">
+                                <h1>Basics</h1>
+                                <hr>
+                                <h2>How to start with tools?</h2>
+                                <hr>
+                                First, you should check in <code>onEnable() </code> if server has installed Ktools. To do this use
+                                <pre class='java'><code class='language-java'>
+Ktools api = (Ktools) Bukkit.getPluginManager().getPlugin("Ktools");
+if(api == null) {
+    // Code when Ktools is not installed on server
+}
+                                </code></pre>
+                                And then you should get instance of <code>AdventureAPI</code>. To make this use
+                                <pre class='java'><code class='language-java'>
+BukkitAudiences adventure = BukkitAudiences.create(this);
+                                </code></pre>
+                                <div class="alert alert-warning" role="alert">
+                                    Make sure to disable adventure in <code>onDisable()</code> using <code>adventure.close()</code>
+                                </div> 
+                                <hr>
+                                <h2>GlobalManagersWrapper</h2>
+                                <hr>
+                                This is a wrapper of managers that <b>should have only one instance - this from Ktools</b>. You can get it from
+                                <pre class='java'><code class='language-java'>
+GlobalManagersWrapper globalManagersWrapper = api.getGlobalManagersWrapper();
+                                </code></pre>
+                                <div class="alert alert-warning" role="alert">
+                                    From this wrapper you can get <code>LanguageManager</code>, but this is a <b>global language</b> and you should create your own where you pu this into constructor!
+                                </div>
+                                <hr>
+                                <h2>ToolsObjectWrapper</h2>
+                                <hr>
+                                This is a wrapper that contains all usable object from tools and plugin. It is injected in commands, listeners etc. to avoid using <code>static</code> keyword. You can make your own object that contains objects from your plugin too.
+                                <pre class='java'><code class='language-java'>
+public class ExampleWrapper extends ToolsObjectWrapper {
+    private final ExampleObjectFromYourPlugin objectName;
+
+    public ExampleWrapper(GlobalManagersWrapper globalManagersWrapper, LanguageManager languageManager, JavaPlugin plugin, BukkitAudiences adventure, ExampleObjectFromYourPlugin objectName) {
+        super(globalManagersWrapper, languageManager, plugin, adventure);
+        this.objectName = objectName;
+    }
+
+    public ExampleObjectFromYourPlugin getObjectName() {
+        return objectName;
+    }
+}
+                                </code></pre>
+                            
+                            </div>
                             <div class="tab-pane fade" id="debug-tab-pane" role="tabpanel" aria-labelledby="debug-tab" tabindex="0">Debug</div>
                             <div class="tab-pane fade" id="updater-tab-pane" role="tabpanel" aria-labelledby="updater-tab" tabindex="0">Updater</div>
             
