@@ -139,6 +139,7 @@ depend: [Ktools]
     &lt;groupId&gt;com.github.KPGTB&lt;/groupId&gt;
     &lt;artifactId&gt;Ktools&lt;/artifactId&gt;
     &lt;version&gt;{VERSION}&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
 &lt;/dependency&gt;
                                 </code></pre>
 
@@ -152,7 +153,7 @@ repositories {
 
                                 <pre class='gradle'><code class='language-gradle'>
 dependencies {
-    implementation 'com.github.KPGTB:Ktools:{VERSION}'
+    compileOnly 'com.github.KPGTB:Ktools:{VERSION}'
 }
                                 </code></pre>
                             </div>
